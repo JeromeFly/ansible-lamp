@@ -5,10 +5,12 @@
     name: firewalld
     state: stopped
     enabled: no
+    
 - name: modify SELinux config
   lineinfile:
     dest: /etc/selinux/config
     regexp: '^SELINUX='
     line: 'SELINUX=disabled'
+    
 - name: disable SELinux
   shell: /sbin/setenforce 0 || /bin/true
