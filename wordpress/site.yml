@@ -1,0 +1,10 @@
+---
+
+- name: LAMP Begin...
+  hosts: localhost
+  become: yes
+  
+  roles:
+    - env
+    - dbserver
+    - webserver

@@ -1,0 +1,11 @@
+---
+
+- name: Copy wordpress file
+  copy:
+    src: ../../../codes/wordpress/
+    dest: /var/www/html/ 
+- name: Copy web site config file
+  copy:
+    src: ../../../codes/wp-config.php
+    dest: /var/www/html/ 
+

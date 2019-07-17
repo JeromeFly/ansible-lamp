@@ -1,0 +1,9 @@
+---
+
+- name: Install httpd php
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - httpd
+    - php

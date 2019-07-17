@@ -1,0 +1,9 @@
+---
+
+- name: start httpd service
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  with_items:
+    - httpd
